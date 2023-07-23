@@ -1,0 +1,77 @@
+:not(section.meaning) + section.meaning {
+  // select first meaning section
+  padding-top: 2rem;
+}
+section.meaning {
+  padding-bottom: 2rem;
+  .content {
+    position: relative;
+
+    // border-top: 2px solid $gray;
+    .section-title {
+      width: 100%;
+      text-align: left;
+      border-bottom: 1px solid $rat;
+      line-height: 0.1em;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      //   margin: 10px 0 20px;
+      position: relative;
+      span {
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        background: white;
+        padding-right: 20px;
+
+        .bg-dark & {
+          background-color: $bg-dark;
+        }
+      }
+    }
+
+    .meaning-title {
+      color: $gray;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: normal;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    ul {
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      li {
+        &:nth-of-type(n + 2) {
+          margin-top: 0.7rem;
+        }
+        &::marker {
+          color: $button-play-dark-purple;
+        }
+      }
+      span.example {
+        color: gray;
+        font-style: italic;
+      }
+    }
+  }
+  section.synonyms {
+    margin-top: 0.5rem;
+    display: flex;
+    .title {
+      .synm-title {
+        font-family: "Open Sans", sans-serif;
+        color: $gray;
+        text-transform: capitalize;
+        font-size: 1.1rem;
+      }
+    }
+    .synms {
+      padding-left: 1rem;
+      .synm {
+        color: $button-play-dark-purple;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+section.header {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .logo {
+      font-size: 1.9rem;
+    }
+
+    .toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1rem;
+      i {
+        font-size: 1.6rem;
+      }
+
+      input {
+        cursor: pointer;
+        margin: 1rem auto;
+        position: relative;
+        width: 50px;
+        height: 30px;
+        border-radius: 25px;
+        outline: none;
+        background-color: #ccc;
+        -webkit-appearance: none;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        background: $rat;
+      }
+      input::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        height: 1.25rem;
+        width: 1.25rem;
+        background-color: white;
+        transition: left 0.3s;
+      }
+
+      input:checked {
+        background-color: $button-play-dark-purple;
+      }
+
+      input:checked::after {
+        left: 70%;
+      }
+    }
+  }
+  .search-box {
+    display: flex;
+    $border-radius: 15px;
+    input {
+      width: 100%;
+      padding: 15px;
+      border-radius: $border-radius 0 0 $border-radius;
+      outline: 0;
+      border: 0;
+      background: $porcelain;
+      font-size: 17px;
+      font-family: serif;
+      font-weight: bold;
+      &.err {
+        border: 1px solid $err-color;
+      }
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      width: 40px;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      background-color: $porcelain;
+      color: $button-play-dark-purple;
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+
+    .bg-dark & > * {
+      background-color: rgb(255 255 255 / 17%);
+    }
+    .bg-dark & input {
+      color: $text-light;
+    }
+  }
+  span.err-span {
+    display: block;
+    padding-left: 15px;
+    color: $err-color;
+    font-size: 0.9rem;
+  }
+}

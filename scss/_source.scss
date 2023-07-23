@@ -1,0 +1,18 @@
+section.source {
+  .content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid $rat;
+    .source-title {
+      font-family: "Open Sans", sans-serif;
+      color: $gray;
+    }
+    a {
+      color: rgba(85, 85, 85, 0.938);
+      margin-left: 1rem;
+      .bg-dark & {
+        color: $text-light;
+      }
+    }
+  }
+}

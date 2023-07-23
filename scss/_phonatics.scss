@@ -1,0 +1,41 @@
+section.phonatics {
+  padding-top: 3rem;
+  font-family: "Open Sans", sans-serif;
+  .content {
+    position: relative;
+    .word {
+      font-size: xxx-large;
+      font-weight: bold;
+    }
+
+    .phonatics {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: $button-play-dark-purple;
+    }
+    button.spelling {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $button-light-purple;
+      color: $button-play-dark-purple;
+      border: 0;
+      outline: 0;
+      $widthAndHeight: 55px;
+      width: $widthAndHeight;
+      height: $widthAndHeight;
+      border-radius: 50%;
+      position: absolute;
+      right: 0;
+      top: 20px;
+      i {
+        font-size: large;
+      }
+
+      .bg-dark & {
+        color: $button-light-purple;
+        background-color: $button-play-dark-purple;
+      }
+    }
+  }
+}

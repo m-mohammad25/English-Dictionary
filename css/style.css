@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  transition: all 0.3s;
+}
+
+section.header header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+section.header header .logo {
+  font-size: 1.9rem;
+}
+section.header header .toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+section.header header .toggle i {
+  font-size: 1.6rem;
+}
+section.header header .toggle input {
+  cursor: pointer;
+  margin: 1rem auto;
+  position: relative;
+  width: 50px;
+  height: 30px;
+  border-radius: 25px;
+  outline: none;
+  background-color: #ccc;
+  -webkit-appearance: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: #757d75;
+}
+section.header header .toggle input::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: white;
+  transition: left 0.3s;
+}
+section.header header .toggle input:checked {
+  background-color: #a74bee;
+}
+section.header header .toggle input:checked::after {
+  left: 70%;
+}
+section.header .search-box {
+  display: flex;
+}
+section.header .search-box input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px 0 0 15px;
+  outline: 0;
+  border: 0;
+  background: #ecf0f1;
+  font-size: 17px;
+  font-family: serif;
+  font-weight: bold;
+}
+section.header .search-box input.err {
+  border: 1px solid #dc3545;
+}
+section.header .search-box button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  width: 40px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #ecf0f1;
+  color: #a74bee;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+.bg-dark section.header .search-box > * {
+  background-color: rgba(255, 255, 255, 0.17);
+}
+.bg-dark section.header .search-box input {
+  color: #f8f9fa !important;
+}
+section.header span.err-span {
+  display: block;
+  padding-left: 15px;
+  color: #dc3545;
+  font-size: 0.9rem;
+}
+
+section.phonatics {
+  padding-top: 3rem;
+  font-family: "Open Sans", sans-serif;
+}
+section.phonatics .content {
+  position: relative;
+}
+section.phonatics .content .word {
+  font-size: xxx-large;
+  font-weight: bold;
+}
+section.phonatics .content .phonatics {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #a74bee;
+}
+section.phonatics .content button.spelling {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eacefe;
+  color: #a74bee;
+  border: 0;
+  outline: 0;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+section.phonatics .content button.spelling i {
+  font-size: large;
+}
+.bg-dark section.phonatics .content button.spelling {
+  color: #eacefe;
+  background-color: #a74bee;
+}
+
+:not(section.meaning) + section.meaning {
+  padding-top: 2rem;
+}
+
+section.meaning {
+  padding-bottom: 2rem;
+}
+section.meaning .content {
+  position: relative;
+}
+section.meaning .content .section-title {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #757d75;
+  line-height: 0.1em;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+section.meaning .content .section-title span {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background: white;
+  padding-right: 20px;
+}
+.bg-dark section.meaning .content .section-title span {
+  background-color: #212529 !important;
+}
+section.meaning .content .meaning-title {
+  color: #747474;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-family: "Open Sans", sans-serif;
+}
+section.meaning .content ul {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+section.meaning .content ul li:nth-of-type(n + 2) {
+  margin-top: 0.7rem;
+}
+section.meaning .content ul li::marker {
+  color: #a74bee;
+}
+section.meaning .content ul span.example {
+  color: gray;
+  font-style: italic;
+}
+section.meaning section.synonyms {
+  margin-top: 0.5rem;
+  display: flex;
+}
+section.meaning section.synonyms .title .synm-title {
+  font-family: "Open Sans", sans-serif;
+  color: #747474;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+section.meaning section.synonyms .synms {
+  padding-left: 1rem;
+}
+section.meaning section.synonyms .synms .synm {
+  color: #a74bee;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+section.source .content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #757d75;
+}
+section.source .content .source-title {
+  font-family: "Open Sans", sans-serif;
+  color: #747474;
+}
+section.source .content a {
+  color: rgba(85, 85, 85, 0.938);
+  margin-left: 1rem;
+}
+.bg-dark section.source .content a {
+  color: #f8f9fa !important;
+}
+
+/*# sourceMappingURL=style.css.map */
